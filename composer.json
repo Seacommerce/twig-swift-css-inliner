@@ -1,0 +1,34 @@
+{
+  "name": "seacommerce/twig-swift-css-inliner",
+  "description": "Create inlined html e-mails using your favorite template and mailer tool.",
+  "type": "library",
+  "require": {
+    "twig/twig": "^2.5",
+    "swiftmailer/swiftmailer": "^6.1",
+    "pelago/emogrifier": "^2.0",
+    "symfony/dom-crawler": "^4.1",
+    "symfony/css-selector": "^4.1"
+  },
+  "authors": [
+    {
+      "name": "Sil Moelker",
+      "email": "sil@seacommerce.nl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Seacommerce\\TwigSwiftCssInliner\\": "src/"
+    },
+    "exclude-from-classmap": [
+      "/tests/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Seacommerce\\TwigSwiftCssInliner\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.2"
+  }
+}

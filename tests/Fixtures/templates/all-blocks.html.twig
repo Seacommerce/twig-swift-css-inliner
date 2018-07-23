@@ -1,0 +1,53 @@
+{% block subject %}
+    Hi there!
+{% endblock subject %}
+{% block styles %}
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        table {
+            width: 100%;
+        }
+        td, td {
+            padding: 5px;
+        }
+    </style>
+{% endblock styles %}
+
+{% block html %}
+    <html>
+    <title>Test</title>
+    <body>
+    <table>
+        <tr>
+            <th>Order #</th>
+            <td>{{ orderNbr }}</td>
+        </tr>
+        <tr>
+            <th>Order date</th>
+            <td>{{ '2018-07-23'|date }}</td>
+        </tr>
+        <tr>
+            <th>Reference</th>
+            <td>{{ refference }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="greeting"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="message"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="footer"></td>
+        </tr>
+    </table>
+    </body>
+    </html>
+
+{% endblock html %}
+
+{% block text %}
+
+{% endblock text %}
