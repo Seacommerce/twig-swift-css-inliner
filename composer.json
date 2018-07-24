@@ -15,6 +15,11 @@
       "name": "Sil Moelker",
       "email": "sil@seacommerce.nl",
       "homepage": "https://seacommerce.nl"
+    },
+    {
+      "name": "Niels Steenbakker",
+      "email": "niels@seacommerce.nl",
+      "homepage": "https://seacommerce.nl"
     }
   ],
   "autoload": {
