@@ -1,0 +1,31 @@
+{% block html %}
+    <html>
+    <title>Test</title>
+    <body>
+    <p>Dear person, </p>
+    <table>
+        <tr>
+            <th>Order #</th>
+            <td>{{ orderNbr }}</td>
+        </tr>
+        <tr>
+            <th>Order date</th>
+            <td>{{ '2018-07-23'|date }}</td>
+        </tr>
+        <tr>
+            <th>Reference</th>
+            <td>{{ reference }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="greeting"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="message"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="footer"></td>
+        </tr>
+    </table>
+    </body>
+    </html>
+{% endblock html %}

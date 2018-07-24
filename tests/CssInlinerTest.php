@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpUnhandledExceptionInspection */
 
 declare(strict_types=1);
 
@@ -73,5 +73,24 @@ class CssInlinerTest extends TestCase
         $message = $inliner->createEmailFromTemplateFile('subject-only.html.twig', self::$viewData)->setId(self::$messageId)->setDate(self::$messageDate)->setBoundary(self::$messageBoundary);
 //        file_put_contents(__DIR__ . '/Fixtures/templates/subject-only.expected.email', $message->toString());
         $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/subject-only.expected.email', $message->toString());
+    }
+
+    public function testAdditionalCssFile()
+    {
+        $inliner = new CssInliner(self::$twig);
+        $additionalCssFile = __DIR__ . '/Fixtures/additional.css';
+        $message = $inliner->createEmailFromTemplateFile('additional-css.html.twig', self::$viewData, $additionalCssFile)
+            ->setId(self::$messageId)->setDate(self::$messageDate)->setBoundary(self::$messageBoundary);
+//        file_put_contents(__DIR__ . '/Fixtures/templates/additional-css.expected.email', $message->toString());
+        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/additional-css.expected.email', $message->toString());
+    }
+
+    public function testAdditionalCssString()
+    {
+        $inliner = new CssInliner(self::$twig);
+        $additionalCss = file_get_contents(__DIR__ . '/Fixtures/additional.css');
+        $message = $inliner->createEmailFromTemplateFile('additional-css.html.twig', self::$viewData, $additionalCss)
+            ->setId(self::$messageId)->setDate(self::$messageDate)->setBoundary(self::$messageBoundary);
+        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/additional-css.expected.email', $message->toString());
     }
 }

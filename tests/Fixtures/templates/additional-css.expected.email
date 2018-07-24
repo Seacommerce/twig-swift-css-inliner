@@ -1,0 +1,53 @@
+Message-ID: <adb9c4cf72fc807445f0d3cd4afc9db9@test.generated>
+Date: Sat, 28 Sep 2013 00:00:00 +0000
+From: 
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3Dutf-8"></head>
+    <title>Test</title>
+    <bo=
+dy style=3D"background-color: red;">
+    <p style=3D"font-size: 22px; pad=
+ding: 1rem;">Dear person, </p>
+    <table>
+        <tr>
+            <=
+th style=3D"border: solid 1px #000;">Order #</th>
+            <td style=
+=3D"border: solid 1px #000;">223423</td>
+        </tr>
+        <tr>
+ =
+           <th style=3D"border: solid 1px #000;">Order date</th>
+        =
+    <td style=3D"border: solid 1px #000;">July 23, 2018 00:00</td>
+      =
+  </tr>
+        <tr>
+            <th style=3D"border: solid 1px #000;">=
+Reference</th>
+            <td style=3D"border: solid 1px #000;">ABC12</t=
+d>
+        </tr>
+        <tr>
+            <td colspan=3D"2" class=3D"=
+greeting" style=3D"border: solid 1px #000;"></td>
+        </tr>
+       =
+ <tr>
+            <td colspan=3D"2" class=3D"message" style=3D"border: so=
+lid 1px #000;"></td>
+        </tr>
+        <tr>
+            <td colsp=
+an=3D"2" class=3D"footer" style=3D"border: solid 1px #000; font-size: small=
+er;"></td>
+        </tr>
+    </table>
+    </body>
+    </html>

@@ -1,0 +1,16 @@
+body {
+    background-color: red;
+}
+
+td, th {
+    border: solid 1px #000;
+}
+
+td.footer {
+    font-size: smaller;
+}
+
+p {
+    font-size: 22px;
+    padding: 1rem;
+}
