@@ -1,6 +1,7 @@
 {
   "name": "seacommerce/twig-swift-css-inliner",
   "description": "Create inlined html e-mails using your favorite template and mailer tool.",
+  "license": "MIT",
   "type": "library",
   "require": {
     "twig/twig": "^2.5",
@@ -12,7 +13,8 @@
   "authors": [
     {
       "name": "Sil Moelker",
-      "email": "sil@seacommerce.nl"
+      "email": "sil@seacommerce.nl",
+      "homepage": "https://seacommerce.nl"
     }
   ],
   "autoload": {
