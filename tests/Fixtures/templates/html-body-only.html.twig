@@ -1,21 +1,3 @@
-{% block subject %}
-    Email Subject
-{% endblock subject %}
-{% block styles %}
-    <style type="text/css">
-        body {
-            padding: 0;
-            margin: 0;
-        }
-        table {
-            width: 100%;
-        }
-        td, td {
-            padding: 5px;
-        }
-    </style>
-{% endblock styles %}
-
 {% block html %}
     <html>
     <title>Test</title>
@@ -45,11 +27,4 @@
     </table>
     </body>
     </html>
-
 {% endblock html %}
-
-{% block text %}
-    Order number: {{ orderNbr }}
-    Order date: {{ '2018-07-23'|date }}
-    Reference: {{ refference }}
-{% endblock text %}

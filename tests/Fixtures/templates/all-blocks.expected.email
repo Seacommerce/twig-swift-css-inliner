@@ -1,0 +1,67 @@
+Message-ID: <adb9c4cf72fc807445f0d3cd4afc9db9@test.generated>
+Date: Sat, 28 Sep 2013 00:00:00 +0000
+Subject: Email Subject
+From: 
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary=__test_phpunit_aWSqkye88HQhRMbg
+
+
+--__test_phpunit_aWSqkye88HQhRMbg
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+    Order number: 223423
+    Order date: July 23, 2018 00:00
+    Refere=
+nce:=20
+
+
+--__test_phpunit_aWSqkye88HQhRMbg
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3Dutf-8"></head>
+    <title>Test</title>
+    <bo=
+dy style=3D"padding: 0; margin: 0;">
+    <table style=3D"width: 100%;">=
+
+        <tr>
+            <th>Order #</th>
+            <td style=3D"p=
+adding: 5px;">223423</td>
+        </tr>
+        <tr>
+            <th>=
+Order date</th>
+            <td style=3D"padding: 5px;">July 23, 2018 00:=
+00</td>
+        </tr>
+        <tr>
+            <th>Reference</th>
+ =
+           <td style=3D"padding: 5px;">ABC12</td>
+        </tr>
+       =
+ <tr>
+            <td colspan=3D"2" class=3D"greeting" style=3D"padding: =
+5px;"></td>
+        </tr>
+        <tr>
+            <td colspan=3D"2" =
+class=3D"message" style=3D"padding: 5px;"></td>
+        </tr>
+        <=
+tr>
+            <td colspan=3D"2" class=3D"footer" style=3D"padding: 5px;=
+"></td>
+        </tr>
+    </table>
+    </body>
+    </html>
+
+
+--__test_phpunit_aWSqkye88HQhRMbg--

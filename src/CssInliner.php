@@ -117,7 +117,6 @@ class CssInliner
         return $this->twigEnvironment;
     }
 
-
     /**
      *
      * @param string $twigTemplatePath
@@ -199,6 +198,10 @@ class CssInliner
         $html = $template->hasBlock($this->htmlBlockName, $viewData) ? $template->renderBlock($this->htmlBlockName, $viewData) : null;
         $text = $template->hasBlock($this->textBlockName, $viewData) ? $template->renderBlock($this->textBlockName, $viewData) : null;
         $style = $template->hasBlock($this->stylesBlockName, $viewData) ? $template->renderBlock($this->stylesBlockName, $viewData) : null;
+
+        if(!empty($subject)) {
+            $subject = trim($subject);
+        }
 
         $crawler = new Crawler($style);
         $elements = $crawler->filter('style');

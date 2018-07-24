@@ -1,0 +1,47 @@
+Message-ID: <adb9c4cf72fc807445f0d3cd4afc9db9@test.generated>
+Date: Sat, 28 Sep 2013 00:00:00 +0000
+From: 
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3Dutf-8"></head>
+    <title>Test</title>
+    <bo=
+dy>
+    <table>
+        <tr>
+            <th>Order #</th>
+         =
+   <td>223423</td>
+        </tr>
+        <tr>
+            <th>Order d=
+ate</th>
+            <td>July 23, 2018 00:00</td>
+        </tr>
+     =
+   <tr>
+            <th>Reference</th>
+            <td>ABC12</td>
+   =
+     </tr>
+        <tr>
+            <td colspan=3D"2" class=3D"greeting=
+"></td>
+        </tr>
+        <tr>
+            <td colspan=3D"2" clas=
+s=3D"message"></td>
+        </tr>
+        <tr>
+            <td colspa=
+n=3D"2" class=3D"footer"></td>
+        </tr>
+    </table>
+    </body>=
+
+    </html>
