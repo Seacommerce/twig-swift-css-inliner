@@ -1,0 +1,27 @@
+body {
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 0;
+}
+
+table{
+    width: 100%;
+}
+
+td, th {
+    border: solid 1px #000;
+}
+
+th {
+    text-align: left;
+}
+
+p {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+p.greeting {
+    font-size: smaller;
+    text-align: center;
+}
