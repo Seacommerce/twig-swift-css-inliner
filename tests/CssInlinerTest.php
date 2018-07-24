@@ -37,8 +37,10 @@ class CssInlinerTest extends TestCase
         self::$messageDate = new \DateTime('2013-09-28', new \DateTimeZone('utc'));
         self::$messageBoundary = '__test_phpunit_aWSqkye88HQhRMbg';
         self::$viewData = [
+            'name' => 'Sil',
             'orderNbr' => 223423,
             'reference' => 'ABC12',
+            'orderDate' => self::$messageDate,
         ];
     }
 
@@ -46,8 +48,8 @@ class CssInlinerTest extends TestCase
     {
         $inliner = new CssInliner(self::$twig);
         $message = $inliner->createEmailFromTemplateFile('all-blocks.html.twig', self::$viewData)->setId(self::$messageId)->setDate(self::$messageDate)->setBoundary(self::$messageBoundary);
-//        file_put_contents(__DIR__ . '/Fixtures/templates/all-blocks.expected.email', $message->toString());
-        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/all-blocks.expected.email', $message->toString());
+//        file_put_contents(__DIR__ . '/Fixtures/templates/all-blocks.expected.eml', $message->toString());
+        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/all-blocks.expected.eml', $message->toString());
     }
 
     public function testHtmlBodyOnly()
@@ -55,24 +57,24 @@ class CssInlinerTest extends TestCase
         $inliner = new CssInliner(self::$twig);
 
         $message = $inliner->createEmailFromTemplateFile('html-body-only.html.twig', self::$viewData)->setId(self::$messageId)->setDate(self::$messageDate)->setBoundary(self::$messageBoundary);
-//        file_put_contents(__DIR__ . '/Fixtures/templates/html-body-only.expected.email', $message->toString());
-        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/html-body-only.expected.email', $message->toString());
+//        file_put_contents(__DIR__ . '/Fixtures/templates/html-body-only.expected.eml', $message->toString());
+        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/html-body-only.expected.eml', $message->toString());
     }
 
     public function testTextBodyOnly()
     {
         $inliner = new CssInliner(self::$twig);
         $message = $inliner->createEmailFromTemplateFile('text-body-only.html.twig', self::$viewData)->setId(self::$messageId)->setDate(self::$messageDate)->setBoundary(self::$messageBoundary);
-//        file_put_contents(__DIR__ . '/Fixtures/templates/text-body-only.expected.email', $message->toString());
-        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/text-body-only.expected.email', $message->toString());
+//        file_put_contents(__DIR__ . '/Fixtures/templates/text-body-only.expected.eml', $message->toString());
+        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/text-body-only.expected.eml', $message->toString());
     }
 
     public function testSubjectOnly()
     {
         $inliner = new CssInliner(self::$twig);
         $message = $inliner->createEmailFromTemplateFile('subject-only.html.twig', self::$viewData)->setId(self::$messageId)->setDate(self::$messageDate)->setBoundary(self::$messageBoundary);
-//        file_put_contents(__DIR__ . '/Fixtures/templates/subject-only.expected.email', $message->toString());
-        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/subject-only.expected.email', $message->toString());
+//        file_put_contents(__DIR__ . '/Fixtures/templates/subject-only.expected.eml', $message->toString());
+        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/subject-only.expected.eml', $message->toString());
     }
 
     public function testAdditionalCssFile()
@@ -81,8 +83,8 @@ class CssInlinerTest extends TestCase
         $additionalCssFile = __DIR__ . '/Fixtures/additional.css';
         $message = $inliner->createEmailFromTemplateFile('additional-css.html.twig', self::$viewData, $additionalCssFile)
             ->setId(self::$messageId)->setDate(self::$messageDate)->setBoundary(self::$messageBoundary);
-//        file_put_contents(__DIR__ . '/Fixtures/templates/additional-css.expected.email', $message->toString());
-        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/additional-css.expected.email', $message->toString());
+//        file_put_contents(__DIR__ . '/Fixtures/templates/additional-css.expected.eml', $message->toString());
+        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/additional-css.expected.eml', $message->toString());
     }
 
     public function testAdditionalCssString()
@@ -91,6 +93,16 @@ class CssInlinerTest extends TestCase
         $additionalCss = file_get_contents(__DIR__ . '/Fixtures/additional.css');
         $message = $inliner->createEmailFromTemplateFile('additional-css.html.twig', self::$viewData, $additionalCss)
             ->setId(self::$messageId)->setDate(self::$messageDate)->setBoundary(self::$messageBoundary);
-        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/additional-css.expected.email', $message->toString());
+        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/additional-css.expected.eml', $message->toString());
+    }
+
+    public function testExampleString()
+    {
+        $inliner = new CssInliner(self::$twig);
+        $additionalCss = file_get_contents(__DIR__ . '/Fixtures/example.css');
+        $message = $inliner->createEmailFromTemplateFile('example.html.twig', self::$viewData, $additionalCss)
+            ->setId(self::$messageId)->setDate(self::$messageDate)->setBoundary(self::$messageBoundary);
+//        file_put_contents(__DIR__ . '/Fixtures/templates/example.expected.eml', $message->toString());
+        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/example.expected.eml', $message->toString());
     }
 }
