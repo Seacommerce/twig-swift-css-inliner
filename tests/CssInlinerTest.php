@@ -105,4 +105,12 @@ class CssInlinerTest extends TestCase
 //        file_put_contents(__DIR__ . '/Fixtures/templates/example.expected.eml', $message->toString());
         $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/example.expected.eml', $message->toString());
     }
+
+    public function testHtmlWithNestedStyle()
+    {
+        $inliner = new CssInliner(self::$twig);
+        $message = $inliner->createEmailFromTemplateFile('html-with-nested-style.html.twig', self::$viewData)->setId(self::$messageId)->setDate(self::$messageDate)->setBoundary(self::$messageBoundary);
+//        file_put_contents(__DIR__ . '/Fixtures/templates/html-with-nested-style.expected.eml', $message->toString());
+        $this->assertStringEqualsFile(__DIR__ . '/Fixtures/templates/html-with-nested-style.expected.eml', $message->toString());
+    }
 }

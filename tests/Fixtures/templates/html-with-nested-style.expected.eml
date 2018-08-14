@@ -1,0 +1,56 @@
+Message-ID: <adb9c4cf72fc807445f0d3cd4afc9db9@test.generated>
+Date: Sat, 28 Sep 2013 00:00:00 +0000
+From: 
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3Dutf-8"></head>
+    <title>Test</title>
+   =20
+=
+    <body>
+
+   =20
+
+   =20
+    <table style=3D"width: 100%;">
+     =
+   <tr>
+            <th style=3D"border: solid 5px red;">Order #</th>
+ =
+           <td style=3D"border: solid 1px #ccc;">223423</td>
+        </tr=
+>
+        <tr>
+            <th style=3D"border: solid 5px red;">Order d=
+ate</th>
+            <td style=3D"border: solid 1px #ccc;">July 23, 2018 =
+00:00</td>
+        </tr>
+        <tr>
+            <th style=3D"border=
+: solid 5px red;">Reference</th>
+            <td style=3D"border: solid 1=
+px #ccc;">ABC12</td>
+        </tr>
+        <tr>
+            <td colsp=
+an=3D"2" class=3D"greeting" style=3D"border: solid 1px #ccc;"></td>
+     =
+   </tr>
+        <tr>
+            <td colspan=3D"2" class=3D"message" s=
+tyle=3D"border: solid 1px #ccc;"></td>
+        </tr>
+        <tr>
+   =
+         <td colspan=3D"2" class=3D"footer" style=3D"border: solid 1px #ccc=
+;"></td>
+        </tr>
+    </table>
+    </body>
+    </html>

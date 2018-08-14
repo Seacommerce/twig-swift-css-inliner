@@ -1,0 +1,47 @@
+{% block html %}
+    <html>
+    <title>Test</title>
+    <style type="text/css">
+        table {
+            width: 100%;
+        }
+    </style>
+    <body>
+
+    <style type="text/css">
+        td {
+            border: solid 1px #ccc;
+        }
+    </style>
+
+    <style type="text/css">
+        th {
+            border: solid 5px red;
+        }
+    </style>
+    <table>
+        <tr>
+            <th>Order #</th>
+            <td>{{ orderNbr }}</td>
+        </tr>
+        <tr>
+            <th>Order date</th>
+            <td>{{ '2018-07-23'|date }}</td>
+        </tr>
+        <tr>
+            <th>Reference</th>
+            <td>{{ reference }}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="greeting"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="message"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="footer"></td>
+        </tr>
+    </table>
+    </body>
+    </html>
+{% endblock html %}
