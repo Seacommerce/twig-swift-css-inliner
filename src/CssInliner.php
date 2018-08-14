@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Seacommerce\TwigSwiftCssInliner;
 
-use Exception;
 use Swift_Message;
 use Symfony\Component\DomCrawler\Crawler;
 use Twig_Environment;
-use Twig_Template;
+use Twig_TemplateWrapper;
 
 class CssInliner
 {
@@ -123,22 +122,25 @@ class CssInliner
      * @param array $viewData
      * @param string ...$additionalCss
      * @return Swift_Message
-     * @throws Exception
+     * @throws \Throwable
+     * @throws \Twig_Error_Loader
+     * @throws \Twig_Error_Runtime
+     * @throws \Twig_Error_Syntax
      */
     public function createEmailFromTemplateFile(string $twigTemplatePath, array $viewData, string ...$additionalCss): Swift_Message
     {
-        $template = $this->twigEnvironment->loadTemplate($twigTemplatePath);
+        $template = $this->twigEnvironment->load($twigTemplatePath);
         return $this->createEmailFromTemplate($template, $viewData, $additionalCss);
     }
 
     /**
-     * @param Twig_Template $twigTemplate
+     * @param Twig_TemplateWrapper $twigTemplate
      * @param array $viewData
      * @param string|string[] ...$additionalCss
      * @return Swift_Message
-     * @throws Exception
+     * @throws \Throwable
      */
-    public function createEmailFromTemplate(Twig_Template $twigTemplate, array $viewData, ...$additionalCss): Swift_Message
+    public function createEmailFromTemplate(Twig_TemplateWrapper $twigTemplate, array $viewData, ...$additionalCss): Swift_Message
     {
         $additionalCssArray = [];
         foreach ($additionalCss as $a) {
@@ -186,12 +188,12 @@ class CssInliner
 
 
     /**
-     * @param Twig_Template $template
+     * @param Twig_TemplateWrapper $template
      * @param $viewData
      * @return array
-     * @throws Exception
+     * @throws \Throwable
      */
-    public function extractTemplateBlocks(Twig_Template $template, $viewData): array
+    public function extractTemplateBlocks(Twig_TemplateWrapper $template, $viewData): array
     {
         $viewData = $this->twigEnvironment->mergeGlobals($viewData);
         $subject = $template->hasBlock($this->subjectBlockName, $viewData) ? $template->renderBlock($this->subjectBlockName, $viewData) : null;
